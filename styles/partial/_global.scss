@@ -1,25 +1,53 @@
 @use "./mixin" as *;
+@use "./variables" as *;
 
 @font-face {
   font-family: "Avenir Next";
   src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next";
   src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next";
   src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2");
-  font-weight: bolder;
+  font-weight: 700;
   font-style: normal;
 }
 
 body {
   margin: 0;
   font-family: "Avenir Next";
+}
+
+.navBar {
+  &__logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+  }
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
 }
