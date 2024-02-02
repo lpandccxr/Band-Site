@@ -31,39 +31,109 @@ body {
   flex-direction: column;
   align-items: center;
 
+  @include tablet {
+    flex-direction: row;
+    height: 5rem;
+    padding-top: 1rem;
+  }
+
   &__logo {
     color: white;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2rem;
     text-decoration: none;
-    margin: 1rem 0 0.5rem 0;
+    margin: 1rem 0 0 0;
+    transition: all 0.2s;
 
     @include tablet {
+      height: 100%;
       font-size: 2.25rem;
       line-height: 2.75rem;
+      margin: 0 4rem 0 2.5rem;
+      display: flex;
+      align-items: center;
+    }
+    @include desktop {
+      margin: 0 4rem 0 10rem;
+    }
+
+    &:active {
+      transform: scale(0.95);
     }
   }
   &__menu {
-    width: 100%;
     display: flex;
+    width: 100%;
+    align-items: center;
+
+    @include tablet {
+      justify-content: start;
+      height: 100%;
+    }
   }
   &__item {
     display: inline-block;
     text-align: center;
-    color: $Mercury;
+    padding: 0.5rem 0;
     width: 50%;
+
+    color: $Mercury;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.375rem;
 
     @include tablet {
-      font-size: 1.5rem;
-      line-height: 2rem;
+      height: 95%;
+      width: fit-content;
+      margin-right: 4rem;
+      padding: 0;
+      display: flex;
+      align-items: center;
     }
     &--active {
-      font-weight: 700;
+      color: white;
       border-bottom: 5px solid white;
+    }
+  }
+}
+
+.hero {
+  background-image: url("../../assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 65vw;
+  margin-block-start: 0;
+
+  @include tablet {
+    height: 55vw;
+  }
+
+  @include desktop {
+    height: 50vw;
+  }
+
+  &__darken {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: rgba(50, 50, 50, 0.75);
+  }
+
+  &__title {
+    color: white;
+    position: absolute;
+    font-weight: 600;
+    top: 35%;
+    left: 1rem;
+
+    @include tablet {
+      font-size: 3.55rem;
+      left: 2.5rem;
+    }
+    @include desktop {
+      font-size: 4.5rem;
+      left: 10rem;
     }
   }
 }
