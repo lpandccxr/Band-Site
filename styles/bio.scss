@@ -135,3 +135,13 @@
     }
   }
 }
+
+.gallary {
+  padding: 0 1rem;
+
+  &__img {
+    background-position: center;
+    width: 100%;
+    height: 51%;
+  }
+}
