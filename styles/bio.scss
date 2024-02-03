@@ -43,6 +43,10 @@
     padding: 0 3rem;
   }
 
+  @include desktop {
+    padding: 0 10vw;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 1.5rem;
@@ -55,15 +59,18 @@
     }
   }
 
-  &__story {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
   &__container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__quotate {
+    width: 100%;
     color: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
 
     @include tablet {
       margin-top: 2rem;
@@ -73,7 +80,9 @@
 
   &__img {
     background-size: cover;
+    background-position: center center;
     width: 100%;
+    height: 60%;
   }
   &__dec {
     font-weight: 600;
@@ -85,12 +94,44 @@
     }
   }
 
-  &__name {
+  &__role {
     font-weight: 600;
     line-height: 1.5rem;
 
     @include tablet {
       font-size: 1.5rem;
+    }
+  }
+
+  &__name {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-block-end: 0;
+
+    @include tablet {
+      font-size: 2.75rem;
+      margin-block-end: 1rem;
+    }
+  }
+
+  &__story {
+    width: 100%;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: $BandSite-Black;
+
+    @include tablet {
+      max-width: 48%;
     }
   }
 }
