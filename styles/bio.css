@@ -107,6 +107,38 @@ body {
   padding: 1rem;
   font-size: 0.875rem;
   line-height: 1.5rem;
+  position: relative;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .footbar {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footbar {
+    padding: 2rem 10rem;
+  }
+}
+.footbar__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footbar__top {
+    flex-direction: row;
+  }
+}
+.footbar__middle {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footbar__middle {
+    display: flex;
+  }
 }
 .footbar__icon-container {
   display: flex;
@@ -123,6 +155,29 @@ body {
 .footbar__logo {
   font-weight: lighter;
   margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .footbar__logo {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footbar__logo {
+    right: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footbar__title {
+    margin-right: 2rem;
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footbar__block {
+    margin-right: 3rem;
+  }
 }
 
 .hero {
