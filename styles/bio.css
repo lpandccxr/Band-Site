@@ -105,6 +105,8 @@ body {
   background-color: #323232;
   color: white;
   padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 .footbar__icon-container {
   display: flex;
