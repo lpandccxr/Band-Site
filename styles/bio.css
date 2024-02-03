@@ -248,7 +248,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .gallary {
-    padding: 0 10rem;
+    padding: 0 10vw;
   }
 }
 .gallary__title {
