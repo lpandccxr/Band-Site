@@ -151,8 +151,8 @@ body {
 }
 .about__title {
   font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
   margin-block-end: 0.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -183,7 +183,7 @@ body {
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 60%;
+  aspect-ratio: 16/9;
 }
 .about__dec {
   font-weight: 600;
@@ -241,8 +241,40 @@ body {
 .gallary {
   padding: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .gallary {
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallary {
+    padding: 0 10rem;
+  }
+}
+.gallary__title {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 600;
+  margin-block-end: 0;
+}
+.gallary__container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallary__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .gallary__img {
   background-position: center;
   width: 100%;
-  height: 51%;
+  aspect-ratio: 16/9;
+  margin: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .gallary__img {
+    margin: 0;
+  }
 }/*# sourceMappingURL=bio.css.map */

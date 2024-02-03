@@ -49,8 +49,8 @@
 
   &__title {
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     margin-block-end: 0.5rem;
 
     @include tablet {
@@ -82,7 +82,7 @@
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 60%;
+    aspect-ratio: 16/9;
   }
   &__dec {
     font-weight: 600;
@@ -139,9 +139,38 @@
 .gallary {
   padding: 0 1rem;
 
+  @include tablet {
+    padding: 0 3rem;
+  }
+  @include desktop {
+    padding: 0 10rem;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    margin-block-end: 0;
+  }
+
+  &__container {
+    width: 100%;
+
+    @include tablet {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   &__img {
     background-position: center;
     width: 100%;
-    height: 51%;
+    aspect-ratio: 16 / 9;
+    margin: 0.5rem 0;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 }
