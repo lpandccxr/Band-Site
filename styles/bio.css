@@ -101,6 +101,11 @@ body {
   border-bottom: 5px solid white;
 }
 
+.footbar {
+  background-color: #323232;
+  color: white;
+}
+
 .hero {
   background-image: url("../../assets/Images/hero-bio.jpg");
   background-position: center;
