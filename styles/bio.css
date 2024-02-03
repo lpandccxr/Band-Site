@@ -159,7 +159,7 @@ body {
 @media screen and (min-width: 768px) {
   .footbar__logo {
     position: absolute;
-    top: 1rem;
+    top: 0.5rem;
     right: 3rem;
   }
 }
