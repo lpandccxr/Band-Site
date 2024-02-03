@@ -6,22 +6,14 @@
   background-image: url("../../assets/Images/hero-bio.jpg");
   background-position: center;
   background-size: cover;
-  height: 65vw;
+  height: 60vw;
   margin-block-start: 0;
-
-  @include tablet {
-    height: 55vw;
-  }
-
-  @include desktop {
-    height: 50vw;
-  }
 
   &__darken {
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: rgba(50, 50, 50, 0.75);
+    background-color: rgba(50, 50, 50, 0.5);
   }
 
   &__title {
@@ -38,6 +30,67 @@
     @include desktop {
       font-size: 4.5rem;
       left: 10rem;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  @include tablet {
+    padding: 0 3rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-block-end: 0.5rem;
+
+    @include tablet {
+      font-size: 3.55rem;
+      margin: 6rem 0 2rem 0;
+    }
+  }
+
+  &__story {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    width: 100%;
+    color: $BandSite-Black;
+
+    @include tablet {
+      margin-top: 2rem;
+      width: 85%;
+    }
+  }
+
+  &__img {
+    background-size: cover;
+    width: 100%;
+  }
+  &__dec {
+    font-weight: 600;
+    line-height: 1.5rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: 1.5rem;
+
+    @include tablet {
+      font-size: 1.5rem;
     }
   }
 }
