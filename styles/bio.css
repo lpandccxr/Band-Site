@@ -104,6 +104,23 @@ body {
 .footbar {
   background-color: #323232;
   color: white;
+  padding: 1rem;
+}
+.footbar__icon-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footbar__icon {
+  height: 2rem;
+  margin-right: 2rem;
+}
+.footbar__company {
+  font-weight: 600;
+}
+.footbar__logo {
+  font-weight: lighter;
+  margin-top: 3rem;
 }
 
 .hero {
