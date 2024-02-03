@@ -58,8 +58,8 @@ body {
       margin: 0 4rem 0 10rem;
     }
 
-    &:active {
-      transform: scale(0.95);
+    &:hover {
+      color: pink;
     }
   }
   &__menu {
@@ -152,6 +152,8 @@ body {
   &__logo {
     font-weight: lighter;
     margin-top: 3rem;
+    max-width: 7.5rem;
+    max-height: 1.25rem;
     @include tablet {
       position: absolute;
       top: 0.5rem;

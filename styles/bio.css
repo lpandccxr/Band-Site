@@ -58,8 +58,8 @@ body {
     margin: 0 4rem 0 10rem;
   }
 }
-.navBar__logo:active {
-  transform: scale(0.95);
+.navBar__logo:hover {
+  color: pink;
 }
 .navBar__menu {
   display: flex;
@@ -155,6 +155,8 @@ body {
 .footbar__logo {
   font-weight: lighter;
   margin-top: 3rem;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .footbar__logo {
