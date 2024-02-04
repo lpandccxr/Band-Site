@@ -187,7 +187,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .footbar__block {
-    margin-right: 3rem;
+    margin-right: 4%;
   }
 }
 .footbar__email {
