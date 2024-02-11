@@ -16,9 +16,14 @@
   font-weight: 700;
   font-style: normal;
 }
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Avenir Next";
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
 }
 
 a {
