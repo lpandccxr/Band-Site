@@ -79,21 +79,22 @@
 
         <section class="comment">
             <h1 class="comment__title">Join the Conversation</h1>
-            <div class="comment__input-area">
-                <img src="./assets/Images/Mohan-muruge.jpg" alt="head-portrait" class="comment__portrait">
-                <form action="post">
-                    <div>
+            <div class="comment__block">
+                <div class="comment__portrait"></div>
+                <form action="post" class="comment__form">
+                    <div class="comment__input-area">
                         <label for="name" class="comment__label">NAME</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your name" class="comment__input">
+                        <input type="text" name="name" id="name" placeholder="Enter your name" class="comment__input"
+                            required>
                     </div>
 
-                    <div>
+                    <div class="comment__input-area">
                         <label for="message" class="comment__label">COMMENT</label>
-                        <input type="text" name="message" id="message" placeholder="Add a new comment"
-                            class="comment__input">
+                        <textarea name="message" id="message" rows="6" placeholder="Add a new comment"
+                            class="comment__input" required></textarea>
                     </div>
 
-                    <button type="submit">COMMENT</button>
+                    <button class="comment__button" type="submit">COMMENT</button>
                 </form>
             </div>
 
