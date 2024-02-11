@@ -52,6 +52,9 @@ a {
     height: 5rem;
     padding-top: 1rem;
   }
+  @include desktop {
+    height: 6rem;
+  }
 
   &__logo {
     color: white;

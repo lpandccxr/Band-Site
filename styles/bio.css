@@ -49,6 +49,11 @@ a:hover {
     padding-top: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .navBar {
+    height: 6rem;
+  }
+}
 .navBar__logo {
   color: white;
   font-weight: 400;
