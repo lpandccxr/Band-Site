@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+  transition: all 0.5s;
+}
+a:hover {
+  color: white;
+}
+
+.navBar {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .navBar {
+    flex-direction: row;
+    height: 5rem;
+    padding-top: 1rem;
+  }
+}
+.navBar__logo {
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1rem 0 0 0;
+  transition: all 0.2s;
+}
+@media screen and (min-width: 768px) {
+  .navBar__logo {
+    height: 100%;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 0 4rem 0 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navBar__logo {
+    margin: 0 4rem 0 10rem;
+  }
+}
+.navBar__logo:hover {
+  color: pink;
+}
+.navBar__menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+@media screen and (min-width: 768px) {
+  .navBar__menu {
+    justify-content: start;
+    height: 100%;
+  }
+}
+.navBar__item {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 0;
+  width: 50%;
+  color: #e1e1e1;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  .navBar__item {
+    height: 95%;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 4rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+.navBar__item--active {
+  border-bottom: 5px solid white;
+  color: white;
+}
+
+.footbar {
+  background-color: #323232;
+  color: white;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footbar {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footbar {
+    padding: 2rem 10rem;
+  }
+}
+.footbar__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footbar__top {
+    flex-direction: row;
+  }
+}
+.footbar__middle {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footbar__middle {
+    display: flex;
+  }
+}
+.footbar__icon-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.footbar__icon {
+  height: 2rem;
+  margin-right: 2rem;
+}
+.footbar__company {
+  font-weight: 600;
+}
+.footbar__logo {
+  font-weight: lighter;
+  margin-top: 3rem;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .footbar__logo {
+    position: absolute;
+    top: 0.5rem;
+    right: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footbar__logo {
+    right: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footbar__title {
+    margin-right: 2rem;
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footbar__block {
+    margin-right: 4%;
+  }
+}
+.footbar__email {
+  color: silver;
+}/*# sourceMappingURL=shows.css.map */
