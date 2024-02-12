@@ -81,3 +81,20 @@ shows.forEach((show) => {
   blocks.appendChild(button);
   tickets.appendChild(blocks);
 });
+
+const clicked = document.querySelectorAll(".shows__block");
+const buttonClicked = document.querySelectorAll(".shows__button");
+
+clicked.forEach((click) => {
+  const button = click.childNodes[3];
+  button.addEventListener("click", () => {
+    clicked.forEach((clicks) => {
+      clicks.classList.remove("shows__block--active");
+    });
+    buttonClicked.forEach((button) => {
+      button.classList.remove("shows__button--active");
+    });
+    button.classList.add("shows__button--active");
+    click.classList.add("shows__block--active");
+  });
+});

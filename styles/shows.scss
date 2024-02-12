@@ -133,10 +133,17 @@
     border-bottom: 3px solid $Mercury;
     padding-bottom: 1rem;
     padding: 1rem;
+    border-radius: 5px;
     @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    &:hover {
+      background-color: $Mercury;
+    }
+    &--active {
+      background-color: $Mercury;
     }
   }
   &__date {
@@ -152,9 +159,17 @@
     background-color: $BandSite-Black;
     border: none;
     border-radius: 5px;
+    transition: 0.3s all;
 
     @include tablet {
       width: 25%;
+    }
+
+    &:active {
+      scale: 0.95;
+    }
+    &--active{
+      background-color: rgb(107, 107, 107);
     }
   }
   &__type {
