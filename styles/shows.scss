@@ -68,3 +68,101 @@
     }
   }
 }
+
+.shows {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+
+  @include tablet {
+    padding: 2rem 2.5rem;
+  }
+  @include desktop {
+    padding: 5vw 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__list {
+    width: 100%;
+
+    @include desktop {
+      width: 80%;
+    }
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    margin-block-end: 0;
+
+    @include tablet {
+      margin-block-end: 2rem;
+    }
+
+    @include desktop {
+      margin-block-start: 0;
+      line-height: 1rem;
+    }
+  }
+  &__heading {
+    color: $Sliver;
+    font-weight: 600;
+
+    &--top {
+      display: none;
+      padding: 0 1rem;
+
+      @include tablet {
+        display: flex;
+        justify-content: start;
+
+        width: 85%;
+      }
+    }
+    &--block {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    width: 100%;
+    border-bottom: 3px solid $Mercury;
+    padding-bottom: 1rem;
+    padding: 1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__date {
+    font-weight: 600;
+  }
+  &__button {
+    width: 100%;
+    height: 3.5rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: $BandSite-Black;
+    border: none;
+    border-radius: 5px;
+
+    @include tablet {
+      width: 25%;
+    }
+  }
+  &__type {
+    display: inline;
+    width: 32%;
+
+    &--second {
+      width: 26%;
+    }
+  }
+}
