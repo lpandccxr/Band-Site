@@ -25,9 +25,7 @@
     }
   }
   &__title {
-    font-weight: 400;
-    margin-block-end: 0;
-    margin-bottom: 0.5rem;
+    font-weight: 600;
     @include tablet {
       font-size: 2rem;
       font-weight: 600;
@@ -109,6 +107,7 @@
   &__heading {
     color: $Sliver;
     font-weight: 600;
+    font-size: 1rem;
 
     &--top {
       display: none;
@@ -134,10 +133,12 @@
     padding-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
+    font-size: 1.25rem;
     @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 1rem;
     }
     &:hover {
       background-color: $Mercury;
@@ -162,13 +163,16 @@
     transition: 0.3s all;
 
     @include tablet {
-      width: 25%;
+      width: 22%;
+      font-size: 1.25rem;
+      height: 3rem;
+      line-height: 3rem;
     }
 
     &:active {
       scale: 0.95;
     }
-    &--active{
+    &--active {
       background-color: rgb(107, 107, 107);
     }
   }

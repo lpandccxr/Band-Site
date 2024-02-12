@@ -230,9 +230,7 @@ a:hover {
   }
 }
 .hero__title {
-  font-weight: 400;
-  margin-block-end: 0;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
@@ -326,6 +324,7 @@ a:hover {
 .shows__heading {
   color: #afafaf;
   font-weight: 600;
+  font-size: 1rem;
 }
 .shows__heading--top {
   display: none;
@@ -349,12 +348,14 @@ a:hover {
   padding-bottom: 1rem;
   padding: 1rem;
   border-radius: 5px;
+  font-size: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .shows__block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1rem;
   }
 }
 .shows__block:hover {
@@ -380,7 +381,10 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .shows__button {
-    width: 25%;
+    width: 22%;
+    font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
   }
 }
 .shows__button:active {
