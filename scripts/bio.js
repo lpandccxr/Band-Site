@@ -19,22 +19,9 @@ let list = [
   },
 ];
 
-const form = document.querySelector(".comment__form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const currentDate = new Date().toLocaleDateString("en-US");
-  list = [
-    {
-      name: e.target.name.value,
-      date: currentDate,
-      message: e.target.message.value,
-    },
-    ...list,
-  ];
+const comments = document.querySelector(".comment__example");
 
-  const comments = document.querySelector(".comment__example");
-  comments.innerHTML = ``;
-
+function renderComments(list) {
   list.forEach((item) => {
     const comment = document.createElement("div");
     comment.classList.add("comment__section");
@@ -66,6 +53,19 @@ form.addEventListener("submit", (e) => {
     comment.appendChild(form);
     comments.appendChild(comment);
   });
+}
+renderComments(list);
 
+const form = document.querySelector(".comment__form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const currentDate = new Date().toLocaleDateString("en-US");
+  list.unshift({
+    name: e.target.name.value,
+    date: currentDate,
+    message: e.target.message.value,
+  });
+  comments.innerHTML = ``;
+  renderComments(list);
   form.reset();
 });
