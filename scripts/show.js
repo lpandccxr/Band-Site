@@ -31,7 +31,23 @@ const shows = [
   },
 ];
 
+//render heading of show
+const heading = document.querySelector(".shows__heading--top");
+const date = document.createElement("span");
+date.classList.add("shows__type");
+date.innerText = "DATE";
+heading.appendChild(date);
 
+const venue = document.createElement("span");
+venue.classList.add("shows__type");
+venue.classList.add("shows__type--second");
+venue.innerText = "VENUE";
+heading.appendChild(venue);
+
+const loca = document.createElement("span");
+loca.classList.add("shows__type");
+loca.innerText = "LOCATION";
+heading.appendChild(loca);
 
 //render shows
 const tickets = document.querySelector(".shows__tickets");
@@ -84,6 +100,7 @@ shows.forEach((show) => {
   tickets.appendChild(blocks);
 });
 
+//handlling shows selected
 const clicked = document.querySelectorAll(".shows__block");
 const buttonClicked = document.querySelectorAll(".shows__button");
 

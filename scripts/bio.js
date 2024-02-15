@@ -64,8 +64,8 @@ form.addEventListener("submit", (e) => {
     name: e.target.name.value,
     date: currentDate,
     message: e.target.message.value,
-  });
-  comments.innerHTML = ``;
-  renderComments(list);
-  form.reset();
+  }); //insert input comment
+  comments.innerHTML = ``; //clean out rendering
+  renderComments(list); //render the list again
+  form.reset(); //rest form input filed
 });
