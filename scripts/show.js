@@ -31,8 +31,10 @@ const shows = [
   },
 ];
 
-const tickets = document.querySelector(".shows__tickets");
 
+
+//render shows
+const tickets = document.querySelector(".shows__tickets");
 shows.forEach((show) => {
   const blocks = document.createElement("div");
   blocks.classList.add("shows__block");

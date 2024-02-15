@@ -253,6 +253,7 @@
     border: 1px solid $Sliver;
     background-color: rgb(249, 249, 249);
     border-radius: 5px;
+    resize: none;
 
     &::placeholder {
       color: black;
