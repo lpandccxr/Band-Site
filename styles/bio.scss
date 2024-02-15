@@ -24,11 +24,10 @@
     left: 1rem;
 
     @include tablet {
-      font-size: 3.55rem;
+      font-size: 4.5rem;
       left: 2.5rem;
     }
     @include desktop {
-      font-size: 4.5rem;
       left: 10rem;
     }
   }
@@ -48,14 +47,15 @@
   }
 
   &__title {
+    color: $BandSite-Black;
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 2.75rem;
-    margin-block-end: 0.5rem;
+    margin-block-end: 0;
 
     @include tablet {
-      font-size: 3.55rem;
-      margin: 6rem 0 2rem 0;
+      font-size: 2.75rem;
+      margin: 5rem 0 0 0;
     }
   }
 
@@ -138,6 +138,7 @@
 
 .gallary {
   padding: 0 1rem;
+  margin-bottom: 2rem;
 
   @include tablet {
     padding: 0 3rem;
@@ -147,9 +148,14 @@
   }
 
   &__title {
+    color: $BandSite-Black;
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 600;
+
+    @include tablet {
+      font-size: 3rem;
+    }
   }
 
   &__container {
@@ -190,10 +196,15 @@
   }
 
   &__title {
+    color: $BandSite-Black;
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 600;
-    margin-block-end: 0;
+    margin-block-end: 0.8rem;
+
+    @include tablet {
+      font-size: 3rem;
+    }
   }
 
   &__block {

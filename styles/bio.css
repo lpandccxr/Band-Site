@@ -192,7 +192,7 @@ a:hover {
 @media screen and (min-width: 768px) {
   .footbar__title {
     margin-right: 2rem;
-    font-size: 2.25rem;
+    font-size: 2.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -226,13 +226,12 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 3.55rem;
+    font-size: 4.5rem;
     left: 2.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    font-size: 4.5rem;
     left: 10rem;
   }
 }
@@ -253,15 +252,16 @@ a:hover {
   }
 }
 .about__title {
+  color: #323232;
   font-weight: 600;
   font-size: 2.25rem;
   line-height: 2.75rem;
-  margin-block-end: 0.5rem;
+  margin-block-end: 0;
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    font-size: 3.55rem;
-    margin: 6rem 0 2rem 0;
+    font-size: 2.75rem;
+    margin: 5rem 0 0 0;
   }
 }
 .about__container {
@@ -343,6 +343,7 @@ a:hover {
 
 .gallary {
   padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .gallary {
@@ -355,9 +356,15 @@ a:hover {
   }
 }
 .gallary__title {
+  color: #323232;
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .gallary__title {
+    font-size: 3rem;
+  }
 }
 .gallary__container {
   width: 100%;
@@ -398,10 +405,16 @@ a:hover {
   }
 }
 .comment__title {
+  color: #323232;
   font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 600;
-  margin-block-end: 0;
+  margin-block-end: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__title {
+    font-size: 3rem;
+  }
 }
 .comment__block {
   width: 100%;

@@ -192,7 +192,7 @@ a:hover {
 @media screen and (min-width: 768px) {
   .footbar__title {
     margin-right: 2rem;
-    font-size: 2.25rem;
+    font-size: 2.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -305,7 +305,7 @@ a:hover {
   }
 }
 .shows__title {
-  font-size: 2.25rem;
+  font-size: 2.75rem;
   font-weight: 600;
   padding-left: 1rem;
   margin-block-end: 0;
