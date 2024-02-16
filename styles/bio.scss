@@ -314,12 +314,16 @@
   }
 
   &__delete {
+    font-size: 1rem;
+    color: $BandSite-Black;
+    background-color: white;
     position: absolute;
     right: 0;
     border: none;
 
     &:active {
       scale: 0.8;
+      color: red;
     }
   }
 }
