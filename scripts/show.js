@@ -1,6 +1,6 @@
 import BandSiteApi from "./band-site-api.js";
 
-const showsClass = new BandSiteApi("eab30806-8fdc-432d-8db2-e067e49bb38c");
+const showsClass = new BandSiteApi("aadbb0c6-d244-4158-8451-e32ca8f14244");
 
 let shows = [];
 await showsClass.getShow().then((response) => {

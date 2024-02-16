@@ -1,14 +1,18 @@
 import BandSiteApi from "./band-site-api.js";
 
-const commentClass = new BandSiteApi("eab30806-8fdc-432d-8db2-e067e49bb38c");
+const commentClass = new BandSiteApi("aadbb0c6-d244-4158-8451-e32ca8f14244");
 
-const comments = document.querySelector(".comment__example");
+function sortList(list) {
+  list.sort((a, b) => {
+    return b.timestamp - a.timestamp;
+  });
+}
 
 async function renderComments() {
-  let list = [];
-  await commentClass.getComments().then((response) => {
-    list = response;
-  }); //fetch the comments
+  const comments = document.querySelector(".comment__example");
+  const list = await commentClass.getComments();
+  sortList(list);
+  comments.innerHTML = ``; //clean out rendering
 
   list.forEach((item) => {
     const comment = document.createElement("div");
@@ -42,18 +46,18 @@ async function renderComments() {
     comments.appendChild(comment);
   });
 }
+
 renderComments();
 
 const form = document.querySelector(".comment__form");
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const currentDate = new Date().toLocaleDateString("en-US");
-  list.unshift({
+  const newComment = {
     name: e.target.name.value,
-    date: currentDate,
-    message: e.target.message.value,
-  }); //insert input comment
-  comments.innerHTML = ``; //clean out rendering
+    comment: e.target.message.value,
+  };
+  console.log(newComment);
+  await commentClass.postComment(newComment);
   renderComments(); //render the list again
   form.reset(); //rest form input filed
 });

@@ -10,22 +10,13 @@ class BandSiteApi {
         api_key: this.apiKey,
       },
     });
+
     return response.data;
   }
   async postComment(comment) {
-    const response = await axios.post(this.baseUrl + "/comments", {
-      params: {
-        api_key: this.apiKey,
-      },
-      header: {
-        "Content-Type": "application/json",
-      },
-      body: {
-        name: comment.name,
-        comment: comment.comment,
-      },
+    await axios.post(this.baseUrl + "/comments", comment, {
+      params: { api_key: this.apiKey },
     });
-    console.log("Post", response);
   }
 
   async getShow() {
@@ -34,6 +25,7 @@ class BandSiteApi {
         api_key: this.apiKey,
       },
     });
+
     return response.data;
   }
 }
