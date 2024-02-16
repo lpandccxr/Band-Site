@@ -19,6 +19,12 @@ class BandSiteApi {
     });
   }
 
+  async deleteComment(id) {
+    await axios.delete(this.baseUrl + "/comments/" + id, {
+      params: { api_key: this.apiKey },
+    });
+  }
+
   async getShow() {
     const response = await axios.get(this.baseUrl + "/showdates", {
       params: {

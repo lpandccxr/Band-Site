@@ -46,6 +46,7 @@ async function renderComments() {
 
     const del = document.createElement("button");
     del.classList.add("comment__delete");
+    del.setAttribute("id", item.id);
     del.innerText = "X";
     comment.appendChild(del);
 
@@ -53,7 +54,7 @@ async function renderComments() {
   });
 }
 
-renderComments();
+await renderComments(); //default rendering
 
 const form = document.querySelector(".comment__form");
 form.addEventListener("submit", async (e) => {
@@ -62,8 +63,15 @@ form.addEventListener("submit", async (e) => {
     name: e.target.name.value,
     comment: e.target.message.value,
   };
-  console.log(newComment);
   await commentClass.postComment(newComment);
-  renderComments(); //render the list again
+  await renderComments(); //render the list again
   form.reset(); //rest form input filed
+});
+
+const dele = document.querySelectorAll(".comment__delete");
+dele.forEach((del) => {
+  del.addEventListener("click", async (e) => {
+    await commentClass.deleteComment(del.getAttribute("id"));
+    await renderComments();
+  });
 });
