@@ -1,35 +1,11 @@
-const shows = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+import BandSiteApi from "./band-site-api.js";
+
+const showsClass = new BandSiteApi("eab30806-8fdc-432d-8db2-e067e49bb38c");
+
+let shows = [];
+await showsClass.getShow().then((response) => {
+  shows = response;
+}); //fetch the shows from api
 
 //render heading of show
 const heading = document.querySelector(".shows__heading--top");
@@ -63,7 +39,7 @@ shows.forEach((show) => {
   dateHeading.innerText = "DATE";
   const date = document.createElement("p");
   date.classList.add("shows__date");
-  date.innerText = show.date;
+  date.innerText = new Date(show.date).toLocaleDateString("en-US");
   typeDate.appendChild(dateHeading);
   typeDate.appendChild(date);
 
@@ -74,7 +50,7 @@ shows.forEach((show) => {
   venueHeading.classList.add("shows__heading--block");
   venueHeading.innerText = "VENUE";
   const venue = document.createElement("p");
-  venue.innerText = show.venue;
+  venue.innerText = show.place;
   typeVenue.appendChild(venueHeading);
   typeVenue.appendChild(venue);
 

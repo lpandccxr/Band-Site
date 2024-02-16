@@ -1,8 +1,4 @@
-import axios from "axios";
-
-const key = "eab30806-8fdc-432d-8db2-e067e49bb38c";
-
-export class BandSiteApi {
+class BandSiteApi {
   constructor(apiKey) {
     (this.apiKey = apiKey),
       (this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com");
@@ -14,7 +10,7 @@ export class BandSiteApi {
         api_key: this.apiKey,
       },
     });
-    console.log("Get comments: ", response);
+    return response.data;
   }
   async postComment(comment) {
     const response = await axios.post(this.baseUrl + "/comments", {
@@ -38,6 +34,8 @@ export class BandSiteApi {
         api_key: this.apiKey,
       },
     });
-    console.log("Get", response);
+    return response.data;
   }
 }
+
+export default BandSiteApi;

@@ -1,27 +1,15 @@
-let list = [
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    message:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Christina Cabrera",
-    date: "10/28/2023",
-    message:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    message:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+import BandSiteApi from "./band-site-api.js";
+
+const commentClass = new BandSiteApi("eab30806-8fdc-432d-8db2-e067e49bb38c");
 
 const comments = document.querySelector(".comment__example");
 
-function renderComments(list) {
+async function renderComments() {
+  let list = [];
+  await commentClass.getComments().then((response) => {
+    list = response;
+  }); //fetch the comments
+
   list.forEach((item) => {
     const comment = document.createElement("div");
     comment.classList.add("comment__section");
@@ -40,21 +28,21 @@ function renderComments(list) {
     name.innerText = item.name;
     const date = document.createElement("span");
     date.classList.add("comment__date");
-    date.innerText = item.date;
+    date.innerText = new Date(item.timestamp).toLocaleDateString("en-US");
     info.appendChild(name);
     info.appendChild(date);
     form.appendChild(info);
 
     const text = document.createElement("p");
     text.classList.add("comment__text");
-    text.innerText = item.message;
+    text.innerText = item.comment;
     form.appendChild(text);
 
     comment.appendChild(form);
     comments.appendChild(comment);
   });
 }
-renderComments(list);
+renderComments();
 
 const form = document.querySelector(".comment__form");
 form.addEventListener("submit", (e) => {
@@ -66,6 +54,6 @@ form.addEventListener("submit", (e) => {
     message: e.target.message.value,
   }); //insert input comment
   comments.innerHTML = ``; //clean out rendering
-  renderComments(list); //render the list again
+  renderComments(); //render the list again
   form.reset(); //rest form input filed
 });
