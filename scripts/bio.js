@@ -90,6 +90,7 @@ dele.forEach((del) => {
 const like = document.querySelectorAll(".comment__like");
 like.forEach((item) => {
   item.addEventListener("click", async (e) => {
+    console.log("like clicked");
     await commentClass.likeComment(item.getAttribute("id"));
     await renderComments();
   });
