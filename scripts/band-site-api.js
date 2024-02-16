@@ -26,9 +26,9 @@ class BandSiteApi {
   }
 
   async likeComment(id) {
-    await axios.delete(this.baseUrl + "/comments/" + id +"/like", {
-      params: { api_key: this.apiKey },
-    });
+    const response = await axios.put(
+      this.baseUrl + "/comments/" + id + "/like?api_key=" + this.apiKey
+    );
   }
 
   async getShow() {

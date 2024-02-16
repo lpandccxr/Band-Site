@@ -42,6 +42,17 @@ async function renderComments() {
     text.innerText = item.comment;
     form.appendChild(text);
 
+    const likeBlock = document.createElement("button");
+    likeBlock.classList.add("comment__like");
+    likeBlock.setAttribute("id", item.id);
+    const likeIcon = document.createElement("img");
+    likeIcon.setAttribute("src", "./assets/Icons/SVG/icon-like.svg");
+    likeBlock.appendChild(likeIcon);
+    const likeNum = document.createElement("span");
+    likeNum.innerHTML = item.likes;
+    likeBlock.appendChild(likeNum);
+    form.appendChild(likeBlock);
+
     comment.appendChild(form);
 
     const del = document.createElement("button");
@@ -72,6 +83,14 @@ const dele = document.querySelectorAll(".comment__delete");
 dele.forEach((del) => {
   del.addEventListener("click", async (e) => {
     await commentClass.deleteComment(del.getAttribute("id"));
+    await renderComments();
+  });
+});
+
+const like = document.querySelectorAll(".comment__like");
+like.forEach((item) => {
+  item.addEventListener("click", async (e) => {
+    await commentClass.likeComment(item.getAttribute("id"));
     await renderComments();
   });
 });
