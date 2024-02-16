@@ -43,6 +43,12 @@ async function renderComments() {
     form.appendChild(text);
 
     comment.appendChild(form);
+
+    const del = document.createElement("button");
+    del.classList.add("comment__delete");
+    del.innerText = "X";
+    comment.appendChild(del);
+
     comments.appendChild(comment);
   });
 }

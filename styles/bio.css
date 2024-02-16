@@ -437,6 +437,7 @@ a:hover {
   padding-bottom: 2rem;
   border-bottom: 3px solid #e1e1e1;
   margin-bottom: 2rem;
+  position: relative;
 }
 .comment__portrait {
   background-color: #e1e1e1;
@@ -521,4 +522,12 @@ a:hover {
   line-height: 2rem;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+.comment__delete {
+  position: absolute;
+  right: 0;
+  border: none;
+}
+.comment__delete:active {
+  scale: 0.8;
 }/*# sourceMappingURL=bio.css.map */

@@ -226,6 +226,7 @@
     padding-bottom: 2rem;
     border-bottom: 3px solid $Mercury;
     margin-bottom: 2rem;
+    position: relative;
   }
 
   &__portrait {
@@ -310,5 +311,15 @@
     line-height: 2rem;
     margin-block-start: 0;
     margin-block-end: 0;
+  }
+
+  &__delete {
+    position: absolute;
+    right: 0;
+    border: none;
+
+    &:active {
+      scale: 0.8;
+    }
   }
 }
