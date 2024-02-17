@@ -117,6 +117,7 @@ a {
     &--active {
       border-color: white;
       color: white;
+      pointer-events: none;
     }
   }
 }

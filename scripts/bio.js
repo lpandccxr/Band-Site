@@ -1,7 +1,7 @@
 import BandSiteApi from "./band-site-api.js";
 
 const commentClass = new BandSiteApi("aadbb0c6-d244-4158-8451-e32ca8f14244");
- 
+
 //a function to sort the comment list by date
 function sortList(list) {
   list.sort((a, b) => {
@@ -16,11 +16,11 @@ async function renderComments() {
   sortList(list);
   comments.innerHTML = ``; //clean out exist comment list rendering
 
-  //rendering the comment list 
+  //rendering the comment list
   list.forEach((item) => {
     const comment = document.createElement("div");
     comment.classList.add("comment__section");
-    
+
     //comment
     const portrait = document.createElement("div");
     portrait.classList.add("comment__portrait");
@@ -46,7 +46,7 @@ async function renderComments() {
     text.innerText = item.comment;
     form.appendChild(text);
     //comment
-    
+
     //like button and like number
     const likeBlock = document.createElement("button");
     likeBlock.classList.add("comment__like");
@@ -60,7 +60,7 @@ async function renderComments() {
     form.appendChild(likeBlock);
 
     comment.appendChild(form);
-     
+
     //delete button
     const del = document.createElement("button");
     del.classList.add("comment__delete");
@@ -92,7 +92,7 @@ function getLike() {
   const like = document.querySelectorAll(".comment__like");
   for (const item of like) {
     item.addEventListener("click", async () => {
-      await commentClass.likeComment(item.getAttribute("key"));//put like
+      await commentClass.likeComment(item.getAttribute("key")); //put like
       await renderComments(); //fetch render the list again
     });
   }
@@ -102,8 +102,8 @@ function getDelete() {
   const dele = document.querySelectorAll(".comment__delete");
   for (const del of dele) {
     del.addEventListener("click", async (e) => {
-      await commentClass.deleteComment(del.getAttribute("key"));//submit delete
-      await renderComments();//fetch and render the list again
+      await commentClass.deleteComment(del.getAttribute("key")); //submit delete
+      await renderComments(); //fetch and render the list again
     });
   }
 }

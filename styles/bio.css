@@ -119,6 +119,7 @@ a:hover {
 .navBar__item--active {
   border-color: white;
   color: white;
+  pointer-events: none;
 }
 
 .footbar {
