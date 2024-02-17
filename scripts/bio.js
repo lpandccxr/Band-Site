@@ -44,7 +44,7 @@ async function renderComments() {
 
     const likeBlock = document.createElement("button");
     likeBlock.classList.add("comment__like");
-    likeBlock.setAttribute("id", item.id);
+    likeBlock.setAttribute("key", item.id);
     const likeIcon = document.createElement("img");
     likeIcon.setAttribute("src", "./assets/Icons/SVG/icon-like.svg");
     likeBlock.appendChild(likeIcon);
@@ -57,12 +57,14 @@ async function renderComments() {
 
     const del = document.createElement("button");
     del.classList.add("comment__delete");
-    del.setAttribute("id", item.id);
+    del.setAttribute("key", item.id);
     del.innerText = "X";
     comment.appendChild(del);
 
     comments.appendChild(comment);
   });
+  getDelete();
+  getLike();
 }
 
 await renderComments(); //default rendering
@@ -79,19 +81,22 @@ form.addEventListener("submit", async (e) => {
   form.reset(); //rest form input filed
 });
 
-const dele = document.querySelectorAll(".comment__delete");
-dele.forEach((del) => {
-  del.addEventListener("click", async (e) => {
-    await commentClass.deleteComment(del.getAttribute("id"));
-    await renderComments();
-  });
-});
+function getLike() {
+  const like = document.querySelectorAll(".comment__like");
+  for (const item of like) {
+    item.addEventListener("click", async () => {
+      await commentClass.likeComment(item.getAttribute("key"));
+      await renderComments();
+    });
+  }
+}
 
-const like = document.querySelectorAll(".comment__like");
-like.forEach((item) => {
-  item.addEventListener("click", async (e) => {
-    console.log("like clicked");
-    await commentClass.likeComment(item.getAttribute("id"));
-    await renderComments();
-  });
-});
+function getDelete() {
+  const dele = document.querySelectorAll(".comment__delete");
+  for (const del of dele) {
+    del.addEventListener("click", async (e) => {
+      await commentClass.deleteComment(del.getAttribute("key"));
+      await renderComments();
+    });
+  }
+}

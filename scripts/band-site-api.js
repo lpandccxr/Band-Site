@@ -26,7 +26,6 @@ class BandSiteApi {
   }
 
   async likeComment(id) {
-    console.log("like");
     await axios.put(
       this.baseUrl + "/comments/" + id + "/like?api_key=" + this.apiKey
     );
