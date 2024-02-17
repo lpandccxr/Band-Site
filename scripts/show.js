@@ -25,7 +25,7 @@ loca.classList.add("shows__type");
 loca.innerText = "LOCATION";
 heading.appendChild(loca);
 
-//render shows
+//render shows list
 const tickets = document.querySelector(".shows__tickets");
 shows.forEach((show) => {
   const blocks = document.createElement("div");
@@ -80,7 +80,8 @@ shows.forEach((show) => {
 const clicked = document.querySelectorAll(".shows__block");
 const buttonClicked = document.querySelectorAll(".shows__button");
 
-clicked.forEach((click) => {
+//click then add selected style
+for (const click of clicked) {
   const button = click.childNodes[3];
   button.addEventListener("click", () => {
     clicked.forEach((clicks) => {
@@ -92,4 +93,4 @@ clicked.forEach((click) => {
     button.classList.add("shows__button--active");
     click.classList.add("shows__block--active");
   });
-});
+}
